@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import "./globals.css";
+import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
+config.autoAddCss = false
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="/api_faker/api_faker.js"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <main className="flex-1">{children}</main>
+        <Header/>
+        <main className="flex-1">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
