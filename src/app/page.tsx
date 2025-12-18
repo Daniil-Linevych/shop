@@ -1,15 +1,13 @@
-'use client'
+'use client';
 import { fakeApi } from '@/lib/api';
 import { fakeApiEndpoints } from '@/lib/constants';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
 export default function Home() {
-
   useEffect(() => {
-        fakeApi.get(fakeApiEndpoints.init)
-          .then(console.log)
-    }, []);  
+    fakeApi.get(fakeApiEndpoints.init).then(console.log);
+  }, []);
 
   return (
     <div className="page-container py-12 md:py-20">
@@ -22,7 +20,7 @@ export default function Home() {
         </p>
         <Link
           href="/categories"
-          className="inline-block rounded-lg bg-brand-blue px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
+          className="bg-brand-blue inline-block rounded-lg px-8 py-3 font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
         >
           View categories
         </Link>

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Custom Theme Configuration */
 @theme {
@@ -15,8 +15,9 @@
   --color-brand-bg: #f0f0f0;
 
   /* Font Families */
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
 
   /* Custom Spacing (optional) */
   --spacing-xs: 0.25rem;
@@ -65,5 +66,4 @@
   body {
     @apply bg-white text-gray-900;
   }
-
 }

@@ -9,15 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "brand-blue": "#11305e",
-        "brand-red": "#d63636",
-        "brand-orange": "#ff9900",
-        "brand-black": "#000000",
-        "brand-white": "#ffffff",
-        "brand-light-black": "#333333",
-        "brand-gray": "#777777",
-        "brand-light-blue": "#e4efff",
-        "brand-bg": "#f0f0f0",
+        'brand-blue': '#11305e',
+        'brand-red': '#d63636',
+        'brand-orange': '#ff9900',
+        'brand-black': '#000000',
+        'brand-white': '#ffffff',
+        'brand-light-black': '#333333',
+        'brand-gray': '#777777',
+        'brand-light-blue': '#e4efff',
+        'brand-bg': '#f0f0f0',
       },
       fontFamily: {
         sans: [
@@ -43,10 +43,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
 
 export default config;

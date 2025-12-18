@@ -6,7 +6,7 @@ export default function AboutPage() {
           About us
         </h1>
         <p className="mx-auto mb-8 max-w-full text-lg text-gray-600 md:text-xl">
-          Some text about this online shop. 
+          Some text about this online shop.
         </p>
       </section>
     </div>
