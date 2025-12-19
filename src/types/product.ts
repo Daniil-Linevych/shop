@@ -1,13 +1,13 @@
 export interface Product {
-    key:number
-    name: string
-    price: number
-    oldPrice: number
-    rating: number
-    details: string
-    url: string
-    imageUrl: string
-    discount: boolean 
+  key: number;
+  name: string;
+  price: number;
+  oldPrice: number;
+  rating: number;
+  details: string;
+  url: string;
+  imageUrl: string;
+  discount: boolean;
 }
 
 export interface ProductCardProps {

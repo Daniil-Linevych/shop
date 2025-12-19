@@ -7,5 +7,9 @@ export interface Filters {
 
 export interface FilterPanelProps {
   filters: Filters;
-  onFilterChange: (filterType: keyof Filters, value: string, checked: boolean) => void;
+  onFilterChange: (
+    filterType: keyof Filters,
+    value: string,
+    checked: boolean
+  ) => void;
 }

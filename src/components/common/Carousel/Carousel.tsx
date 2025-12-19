@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import { ProductCarouselProps } from '@/types/product';
-import ProductCarouselCard from "@/components/product/ProductCarouselCard/ProductCarouselCard"
+import ProductCarouselCard from '@/components/product/ProductCarouselCard/ProductCarouselCard';
 
 const Carousel: React.FC<ProductCarouselProps> = ({ products }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -17,7 +17,7 @@ const Carousel: React.FC<ProductCarouselProps> = ({ products }) => {
     <div className="relative">
       <button
         onClick={handlePrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 -ml-4"
+        className="absolute top-1/2 left-0 z-10 -ml-4 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg hover:bg-gray-100"
         aria-label="Previous products"
       >
         <i className="fas fa-chevron-left text-xl" />
@@ -29,14 +29,18 @@ const Carousel: React.FC<ProductCarouselProps> = ({ products }) => {
           style={{ transform: `translateX(-${currentIndex * (256 + 24)}px)` }}
         >
           {products.map((product) => (
-            <ProductCarouselCard key={product.key} product={product} showDiscount={product.discount} />
+            <ProductCarouselCard
+              key={product.key}
+              product={product}
+              showDiscount={product.discount}
+            />
           ))}
         </div>
       </div>
 
       <button
         onClick={handleNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 -mr-4"
+        className="absolute top-1/2 right-0 z-10 -mr-4 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg hover:bg-gray-100"
         aria-label="Next products"
       >
         <i className="fas fa-chevron-right text-xl" />
@@ -45,4 +49,4 @@ const Carousel: React.FC<ProductCarouselProps> = ({ products }) => {
   );
 };
 
-export default Carousel
+export default Carousel;
