@@ -8,18 +8,22 @@ import BrandCard from '@/components/common/Brand/BrandCard';
 import CategoryItem from '@/components/category/CategoryItem/CategoryItem';
 import { Category } from '@/types/category';
 import { Brand } from '@/types/home';
-import { Product } from '@/types/product';
+import { Product, Details } from '@/types/product';
 
 const HomePage: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
 
+  const defaultDetails: Details = {
+    manufacturer: 'Intel Core i5-10400F',
+    ram: 'RAM 16ТБ',
+    processor: 'GeForce GTX 1650 4ТБ'
+  }
   const products: Product[] = [
     {
       key: 1,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,
@@ -30,8 +34,7 @@ const HomePage: React.FC = () => {
     {
       key: 2,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,
@@ -42,8 +45,7 @@ const HomePage: React.FC = () => {
     {
       key: 3,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,
@@ -54,8 +56,7 @@ const HomePage: React.FC = () => {
     {
       key: 4,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,
@@ -66,8 +67,7 @@ const HomePage: React.FC = () => {
     {
       key: 5,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,
@@ -78,8 +78,7 @@ const HomePage: React.FC = () => {
     {
       key: 6,
       name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
+      details: defaultDetails,
       price: 1200,
       oldPrice: 1500,
       rating: 4,

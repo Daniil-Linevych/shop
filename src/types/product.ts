@@ -4,10 +4,16 @@ export interface Product {
   price: number;
   oldPrice: number;
   rating: number;
-  details: string;
+  details: Details;
   url: string;
   imageUrl: string;
   discount: boolean;
+}
+
+export interface Details {
+  manufacturer: string,
+  ram: string
+  processor: string
 }
 
 export interface ProductCardProps {

@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
 
         <p className="mb-3 line-clamp-2 text-sm text-gray-600">
-          {product.details}
+          {product.details.manufacturer + product.details.ram + product.details.processor}
         </p>
 
         <div className="mb-3 flex items-center gap-2">

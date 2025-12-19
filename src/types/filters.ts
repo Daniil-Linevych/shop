@@ -1,8 +1,8 @@
 export interface Filters {
-  manufacturers?: string[];
-  processors?: string[];
-  ram?: string[];
-  priceRange?: [number, number];
+  manufacturers: string[];
+  processors: string[];
+  ram: string[];
+  priceRange: [number, number];
 }
 
 export interface FilterPanelProps {
@@ -13,3 +13,5 @@ export interface FilterPanelProps {
     checked: boolean
   ) => void;
 }
+
+export type SortBy = 'rating' | 'price' | 'manufacturer' | 'name';
