@@ -19,6 +19,8 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-redux": "^9.2.0",
+    "react-stars": "^2.2.5",
+    "react-tabs": "^6.1.0",
     "sass": "^1.94.2",
     "tailwind-merge": "^3.4.0"
   },
@@ -29,6 +31,7 @@
     "@types/node": "^20.19.25",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19",
+    "@types/react-stars": "^2.2.4",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
