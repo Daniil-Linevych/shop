@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { ProductCarouselProps } from '@/types/product';
 import ProductCarouselCard from '@/components/product/ProductCarouselCard/ProductCarouselCard';
+import { VISIBLE_CAROUSEL_PRODUCTS_LENGTH } from '@/lib/constants';
 
 const Carousel: React.FC<ProductCarouselProps> = ({ products }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handlePrev = (): void => {
-    setCurrentIndex((prev) => (prev === 0 ? products.length - 5 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? products.length - VISIBLE_CAROUSEL_PRODUCTS_LENGTH : prev - 1));
   };
 
   const handleNext = (): void => {
-    setCurrentIndex((prev) => (prev >= products.length - 5 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev >= products.length - VISIBLE_CAROUSEL_PRODUCTS_LENGTH ? 0 : prev + 1));
   };
 
   return (

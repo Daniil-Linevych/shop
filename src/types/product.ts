@@ -1,4 +1,4 @@
-export interface Product {
+export interface IProduct {
   key: number;
   name: string;
   price: number;
@@ -10,22 +10,22 @@ export interface Product {
   discount: boolean;
 }
 
-export interface ProductCardProps {
-  product: Product;
-  onAddToCart: (product: Product) => void;
+export interface IProductCardProps {
+  product: IProduct;
+  onAddToCart: (product: IProduct) => void;
   showDiscount?: boolean;
 }
 
 export interface ProductCarouselCardProps {
-  product: Product;
+  product: IProduct;
   showDiscount?: boolean;
 }
 
 export interface ProductListProps {
-  products: Product[];
-  onAddToCart: (product: Product) => void;
+  products: IProduct[];
+  onAddToCart: (product: IProduct) => void;
 }
 
 export interface ProductCarouselProps {
-  products: Product[];
+  products: IProduct[];
 }

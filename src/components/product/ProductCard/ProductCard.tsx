@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProductCardProps } from '@/types/product';
 import ReactStars from 'react-stars';
+import Image from 'next/image';
 
 const ProductCard: React.FC<ProductCardProps> = ({
   product,
@@ -15,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             HOT!
           </div>
         )}
-        <img
+        <Image
           src={product.imageUrl}
           alt={product.name}
           className="h-64 w-full object-cover"

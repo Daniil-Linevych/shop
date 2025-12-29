@@ -1,12 +1,13 @@
 import React from 'react';
 import { BannerProps } from '@/types/home';
+import Image from 'next/image';
 
 const Banner: React.FC<BannerProps> = ({ image, title, className = '' }) => {
   return (
     <div
       className={`group relative cursor-pointer overflow-hidden rounded-lg shadow-lg ${className}`}
     >
-      <img
+      <Image
         src={image}
         alt={title}
         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"

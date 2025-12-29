@@ -1,14 +1,14 @@
-export interface Filters {
+export interface IFilters {
   manufacturers?: string[];
   processors?: string[];
   ram?: string[];
   priceRange?: [number, number];
 }
 
-export interface FilterPanelProps {
-  filters: Filters;
+export interface IFilterPanelProps {
+  filters: IFilters;
   onFilterChange: (
-    filterType: keyof Filters,
+    filterType: keyof IFilters,
     value: string,
     checked: boolean
   ) => void;

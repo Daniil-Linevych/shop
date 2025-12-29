@@ -8,86 +8,11 @@ import BrandCard from '@/components/common/Brand/BrandCard';
 import CategoryItem from '@/components/category/CategoryItem/CategoryItem';
 import { Category } from '@/types/category';
 import { Brand } from '@/types/home';
-import { Product } from '@/types/product';
+import { products } from '@/lib/constants'; 
 
 const HomePage: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
-
-  const products: Product[] = [
-    {
-      key: 1,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-    {
-      key: 2,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-    {
-      key: 3,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-    {
-      key: 4,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-    {
-      key: 5,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-    {
-      key: 6,
-      name: 'ARTLINE Gaming X39',
-      details:
-        'Intel Core i5-10400F / RAM 16ТБ / SSD 240ТБ / GeForce GTX 1650 4ТБ',
-      price: 1200,
-      oldPrice: 1500,
-      rating: 4,
-      imageUrl: '/api_faker/images/products/placeholder.png',
-      discount: false,
-      url: '',
-    },
-  ];
 
   useEffect(() => {
     fakeApi.get(fakeApiEndpoints.init).then((data) => {

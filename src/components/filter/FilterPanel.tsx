@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FilterPanelProps } from '@/types/filters';
+import {manufacturers, processors, ramOptions} from '@/lib/constants'
 
 const FilterPanel: React.FC<FilterPanelProps> = ({
   filters,
@@ -7,30 +8,6 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 }) => {
   const [priceRange, setPriceRange] = useState([100, 20000]);
   const [showNewFirst, setShowNewFirst] = useState(false);
-
-  const manufacturers = [
-    'Apple',
-    'Dell',
-    'Asus',
-    'HP',
-    'Lenovo',
-    'Microsoft',
-    'Razer',
-  ];
-
-  const processors = [
-    'Intel Core i9',
-    'Intel Core i10',
-    'Intel Core i11',
-    'Intel Core i8',
-    'Intel Core i7',
-    'AMD Ryzen 3',
-    'AMD Ryzen 4',
-    'AMD Ryzen 5',
-    'AMD Ryzen 6',
-  ];
-
-  const ramOptions = ['64 GB', '32 GB', '16 GB', '8 GB', '4 GB'];
 
   return (
     <div className="rounded-lg bg-white p-6 shadow-md">

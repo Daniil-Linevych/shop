@@ -1,19 +1,19 @@
-export interface Banner {
+export interface IBanner {
   image: string;
   title: string;
 }
 
-export interface BannerProps extends Banner {
+export interface IBannerProps extends IBanner {
   className?: string;
 }
 
-export interface Brand {
+export interface IBrand {
   id: number;
   name: string;
   imageUrl: string;
 }
 
-export interface BrandCardProps {
+export interface IBrandCardProps {
   brand: string;
   image: string;
 }
